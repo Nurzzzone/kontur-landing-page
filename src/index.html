@@ -4,12 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/owl.carousel.min.css">
   <title>Контур Электрик</title>
 </head>
 <body>
 <!-- Header
 =================================================== -->
-  <header class="header">
+  <header class="header" id="header">
     <div class="container">
       <div class="header__inner">
         <button class="burger">
@@ -23,7 +24,36 @@
         </div>
         <nav class="header__nav">
           <ul class="header__menu">
-            <li class="header__menu-item"><a href="#" class="header__menu-link">Каталог</a><img src="./assets/icons/arrow-down.svg" alt="arrow-down"></li>
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link">Каталог</a>
+              <img src="./assets/icons/arrow-down.svg" alt="arrow-down">
+              <ul class="header__submenu">
+                <li class="header__submenu-items">
+                  <a href="#" class="header__submenu-link">Adakta</a>
+                  <a href="#" class="header__submenu-link">Adakta</a>
+                  <a href="#" class="header__submenu-link">Adakta</a>
+                  <a href="#" class="header__submenu-link">Adakta</a>
+                  <a href="#" class="header__submenu-link">Adakta</a>
+                  <a href="#" class="header__submenu-link">Adakta</a>
+                </li>
+                <li class="header__submenu-items">
+                  <a href="#" class="header__submenu-link">Adakta</a>
+                  <a href="#" class="header__submenu-link">Adakta</a>
+                  <a href="#" class="header__submenu-link">Adakta</a>
+                  <a href="#" class="header__submenu-link">Adakta</a>
+                  <a href="#" class="header__submenu-link">Adakta</a>
+                  <a href="#" class="header__submenu-link">Adakta</a>
+                </li>
+                <li class="header__submenu-items">
+                  <a href="#" class="header__submenu-link">Adakta</a>
+                  <a href="#" class="header__submenu-link">Adakta</a>
+                  <a href="#" class="header__submenu-link">Adakta</a>
+                  <a href="#" class="header__submenu-link">Adakta</a>
+                  <a href="#" class="header__submenu-link">Adakta</a>
+                  <a href="#" class="header__submenu-link">Adakta</a>
+                </li>
+              </ul>
+            </li>
             <li class="header__menu-item"><a href="#" class="header__menu-link">Производители</a><img src="./assets/icons/arrow-down.svg" alt="arrow-down"></li>
             <li class="header__menu-item"><a href="#" class="header__menu-link">О компании</a></li>
             <li class="header__menu-item"><a href="#" class="header__menu-link">Прочее</a><img src="./assets/icons/arrow-down.svg" alt="arrow-down"></li>
@@ -34,7 +64,7 @@
             <svg class="header__input-img" width="23" height="23">
               <use xlink:href="./assets/icons/sprite.svg#search-icon"></use>
             </svg>
-            <input class="header__input-search" type="search" placeholder="Поиск по базе компонентов">
+            <input class="header__input-search" id="search-input" type="search" placeholder="Поиск по базе компонентов">
           </div>
           <div class="header__right">
             <div class="header__info-phones">
@@ -61,8 +91,74 @@
     <!-- Home Page
     =================================================== -->
     <section class="home">
-      
+      <div class="owl-carousel">
+        <div class="carousel-item" style="background-image: url(./assets/images/home-bg.jpg);">
+          <div class="home__inner">
+            <h3 class="home__suptitle">Компоненты</h3>
+            <h1 class="home__title">Эксклюзив</h1>
+            <p class="home__subtitle">Обладаем эксклюзивными правами на дистрибуцию продукции WAYON Power MOSFET по всей России.</p>
+            <button class="btn-outline">Узнать больше</button>
+          </div>
+        </div>
+        <div class="carousel-item" style="background-image: url(./assets/images/home-bg.jpg);">
+          <div class="home__inner">
+            <h3 class="home__suptitle">Компоненты</h3>
+            <h1 class="home__title">Эксклюзив</h1>
+            <p class="home__subtitle">Обладаем эксклюзивными правами на дистрибуцию продукции WAYON Power MOSFET по всей России.</p>
+            <button class="btn-outline">Узнать больше</button>
+          </div>
+        </div>
+        <div class="carousel-item" style="background-image: url(./assets/images/home-bg.jpg);">
+          <div class="home__inner">
+            <h3 class="home__suptitle">Компоненты</h3>
+            <h1 class="home__title">Эксклюзив</h1>
+            <p class="home__subtitle">Обладаем эксклюзивными правами на дистрибуцию продукции WAYON Power MOSFET по всей России.</p>
+            <button class="btn-outline">Узнать больше</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <!-- Home Page
+    =================================================== -->
+    <section class="service">
+      <div class="container">
+        <div class="service__items">
+          <div class="service__item">
+            <svg width="43" height="43">
+              <use xlink:href="./assets/icons/sprite.svg#lamp"></use>
+            </svg>
+            <h3 class="service__item-title">Уселители</h3>
+            <p class="service__item-subtitle">28 378 Наименований</p>
+          </div>
+          <div class="service__item">
+            <svg width="43" height="43">
+              <use xlink:href="./assets/icons/sprite.svg#lamp"></use>
+            </svg>
+            <h3 class="service__item-title">Уселители</h3>
+            <p class="service__item-subtitle">28 378 Наименований</p>
+          </div>
+          <div class="service__item">
+            <svg width="43" height="43">
+              <use xlink:href="./assets/icons/sprite.svg#lamp"></use>
+            </svg>
+            <h3 class="service__item-title">Уселители</h3>
+            <p class="service__item-subtitle">28 378 Наименований</p>
+          </div>
+          <div class="service__item">
+            <svg width="43" height="43">
+              <use xlink:href="./assets/icons/sprite.svg#lamp"></use>
+            </svg>
+            <h3 class="service__item-title">Уселители</h3>
+            <p class="service__item-subtitle">28 378 Наименований</p>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./js/owl.carousel.js"></script>
+  <script src="./js/index.js"></script>
 </body>
 </html>

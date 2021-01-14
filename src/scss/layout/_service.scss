@@ -1,0 +1,18 @@
+.service {
+  margin-top: -30px;
+  position: relative;
+  z-index: 20;
+
+  &__items {
+    background-color: #ffffff;
+  }
+
+  &__item-title {
+    color: #000000;
+  }
+
+  &__item-subtitle {
+    color: #767676;
+  }
+}
+

@@ -19,6 +19,22 @@
   }
 }
 
+.btn-outline {
+  @include font-rule(SourceSansPro, 900);
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 1.2px;
+  padding: 15px 30px;
+  border: 2px solid #ff7c0c;
+  border-radius: 3px;
+  background-color: transparent;
+  @include autoprefixer(transition, .3s ease-in-out)
+
+  &:hover {
+    background-color: #ff7c0c;
+  }
+}
+
 .burger {
   background-color: transparent;
   cursor: pointer;
@@ -43,3 +59,4 @@
     display: block;
   }
 }
+

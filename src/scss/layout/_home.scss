@@ -1,6 +1,52 @@
 .home {
+  @include flex-rule(center, 0);
+  flex-direction: column;
+
+  &__inner {
+    position: absolute;
+    top: 35%;
+    width: 100%;
+    max-width: 450px;
+
+    @media (max-width: 1366px) {
+      margin-left: 8%;
+    }
+  }
+
+  &__suptitle {
+    @include font-rule(SourceSansPro, 400);
+    font-size: 14px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    background-color: #ff7c0c;
+    border-radius: 3px;
+    display: inline-block;
+    padding: 8px 15px;
+    margin-bottom: 50px;
+  }
+
+  &__title {
+    @include font-rule(SourceSansPro, 900);
+    font-size: 60px;
+    letter-spacing: 1.2px;
+    margin-bottom: 30px;
+  }
+
+  &__subtitle {
+    @include font-rule(SourceSansPro, 900);
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: 1.2px;
+  }
+}
+
+.carousel-item {
   width: 100%;
   height: 100vh;
   @include background-rule;
-  background-image: url(.././assets/images/home-bg.jpg);
+  position: relative;
+}
+
+.owl-carousel {
+  height: 100%;
 }
