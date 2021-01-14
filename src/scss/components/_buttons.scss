@@ -1,0 +1,45 @@
+.btn {
+  @include font-rule(SourceSansPro, 900);
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 1.2px;
+  padding: 20px 35px;
+  background-color: #ff7c0c;
+  border: none;
+  text-transform: uppercase;
+  border-radius: 3px;
+
+  span {
+    margin-right: 10px;
+    display: block;
+  }
+
+  @media(max-width: 1300px) {
+    padding: 15px 15px;
+  }
+}
+
+.burger {
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
+  order: 0;
+
+  &__wrapper {
+    width: 60px;
+    height: 40px;
+    @include flex-rule(around, center);
+    flex-direction: column;
+    padding: 5px 0;
+  }
+
+  &__line {
+    width: 40px;
+    height: 3px;
+    background-color: #ffffff;
+  }
+
+  @media(max-width: 768px) {
+    display: block;
+  }
+}

@@ -1,0 +1,6 @@
+.home {
+  width: 100%;
+  height: 100vh;
+  @include background-rule;
+  background-image: url(.././assets/images/home-bg.jpg);
+}
