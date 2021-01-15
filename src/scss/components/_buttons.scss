@@ -8,6 +8,7 @@
   border: none;
   text-transform: uppercase;
   border-radius: 3px;
+  @include autoprefixer(transition, .3s ease-in-out);
 
   span {
     margin-right: 10px;
@@ -16,6 +17,11 @@
 
   @media(max-width: 1300px) {
     padding: 15px 15px;
+  }
+
+  &:hover {
+    background-color: lighten(#ff7c0c, 10%);
+    @include autoprefixer(transition, .3s ease-in-out);
   }
 }
 
@@ -28,7 +34,7 @@
   border: 2px solid #ff7c0c;
   border-radius: 3px;
   background-color: transparent;
-  @include autoprefixer(transition, .3s ease-in-out)
+  @include autoprefixer(transition, .3s ease-in-out);
 
   &:hover {
     background-color: #ff7c0c;
