@@ -1,6 +1,7 @@
 .home {
   @include flex-rule(center, 0);
   flex-direction: column;
+  padding: 0 0 200px;
 
   &__inner {
     position: absolute;

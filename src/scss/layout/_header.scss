@@ -6,6 +6,7 @@
   left: 0;
   z-index: 50;
   border-bottom: 1px solid #858789;
+  @include autoprefixer(transition, .3s ease-in-out);
 
   @media (max-width: 768px) {
     background-color: #000000;
@@ -241,11 +242,15 @@
     height: 100vh;
     position: absolute;
     top: 100%;
-    right: 100%;
+    left: -100%;
     margin-top: 1px;
     background-color: #000000;
+    overflow: hidden;
     @include autoprefixer(transition, .3s ease-in-out);
 
+    @media (max-width: 375px) {
+      max-width: 100%;
+    }
 
     &-menu {
       @include flex-rule(0, 0);
@@ -253,10 +258,8 @@
     }
 
     &-menu-item {
-      padding: 15px 38px;
       @include flex-rule(between, center);
       border-bottom: 1px solid #858789;
-      overflow: hidden;
       position: relative;
 
       &:hover::after {
@@ -270,7 +273,7 @@
         height: 2px;
         background-color: #ff7c0c;
         position: absolute;
-        bottom: 0;
+        top: 100%;
         right: 100%;
         z-index: 10;
         @include autoprefixer(transition, .3s ease-in-out);
@@ -278,14 +281,18 @@
     }
 
     &-menu-link {
+      width: 100%;
       color: #ffffff;
       @include font-rule(SourceSansPro, 700);
       font-size: 14px;
       text-transform: uppercase;
       letter-spacing: 1.2px;
+      padding: 15px 38px;
     }
 
     &-link-img {
+      position: absolute;
+      right: 38px;
       transform: rotate(-90deg);
     }
 
@@ -305,8 +312,15 @@
   }
 
   &__mobile--active {
-    right: 50%;
+    left: 0;
   }
+}
+
+.header--fixed {
+  position: fixed;
+  background-color: #000000;
+  @include autoprefixer(transition, .3s ease-in-out)
+
 }
 
 
