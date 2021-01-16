@@ -19,5 +19,8 @@
     "gulp-ttf2woff": "^1.1.1",
     "gulp-ttf2woff2": "^3.0.0",
     "ttf2woff2": "^4.0.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.12"
   }
 }
