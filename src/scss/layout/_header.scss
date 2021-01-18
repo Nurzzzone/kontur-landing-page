@@ -50,7 +50,7 @@
   }
 
   &__nav {
-    @include autoprefixer(transition, display .3s linear)
+    @include autoprefixer(transition, display .3s linear);
 
     @media(max-width: 1366px) {
       order: 3;
@@ -195,7 +195,7 @@
 
   &__info {
     @include flex-rule(between, center);
-    @include autoprefixer(transition, display .3s linear)
+    @include autoprefixer(transition, display .3s linear);
 
     &-phones {
       margin-right: 26px;
