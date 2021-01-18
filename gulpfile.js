@@ -1,7 +1,6 @@
 // ========================================
 // ============== Gulp START ==============
 // ========================================
-
 const gulp = require('gulp');
 const { src, parallel, series, dest } = require('gulp');
 const sass = require('gulp-sass');

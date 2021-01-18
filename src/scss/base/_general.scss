@@ -16,10 +16,32 @@
   }
 
   @media(max-width: 375px) {
-    display: 290px;
+    max-width: 340px;
   }
 }
 
+.container-sm {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+
+  @media(max-width: 375px) {
+    max-width: 340px;
+  }
+}
+
+.container-md {
+  width: 100%;
+  max-width: 1570px;
+  margin: 0 auto;
+}
+
+.section-items__title {
+  @include font-rule(SourceSansPro, 900);
+  color: #000000;
+  font-size: 60px;
+  letter-spacing: 1.2px;
+}
 
 .logo-img {
   @media(max-width: 425px) {

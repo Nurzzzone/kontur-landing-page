@@ -1,18 +1,52 @@
 .service {
-  margin-top: -30px;
+  margin-top: -110px;
   position: relative;
   z-index: 20;
 
+  @media (max-width: 1366px) {
+    margin-top: -90px;
+  }
+
   &__items {
     background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 6px;
+    margin-bottom: 70px;
+    @include flex-rule(between, center)
+  }
+
+  &__item {
+    // border: 1px solid red;
+
+    svg {
+      margin-bottom: 15px;
+    }
   }
 
   &__item-title {
+    @include font-rule(SourceSansPro, 900);
+    font-size: 18px;
     color: #000000;
+    margin-bottom: 10px;
   }
 
   &__item-subtitle {
+    @include font-rule(SourceSansPro, 400);
+    font-size: 14px;
     color: #767676;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__partners {
+    @include flex-rule(between, center);
+    width: 100%;
+    margin-bottom: 70px;
+    
+    &-img {
+      display: block;
+      width: 100%;
+    }
   }
 }
 

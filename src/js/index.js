@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $(".owl-carousel").owlCarousel({
+  $(".home__items").owlCarousel({
     loop: true,
     items: 1,
     autoplay: true,
@@ -10,6 +10,7 @@ $(document).ready(function(){
     dots: false,
   });
 });
+
 
 const burger = document.querySelector('.burger');
 const mobileMenu = document.querySelector('.header__mobile');
