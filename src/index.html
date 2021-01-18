@@ -82,19 +82,24 @@
             <p class="header__mobile-info-phone">+7(777) 777 77 77</p>
           </div>
         </nav>
-        <div class="header__info">
+        <div class="header__info" id="header-info">
           <div class="header__input">
-            <svg class="header__input-img" width="23" height="23">
-              <use xlink:href="./assets/icons/sprite.svg#search-icon"></use>
-            </svg>
+            <label for="search-input">
+              <svg class="input-search__icon" width="23" height="23">
+                <use xlink:href="./assets/icons/sprite.svg#search-icon"></use>
+              </svg>
+            </label>
             <input class="header__input-search" id="search-input" type="search" placeholder="Поиск по базе компонентов">
+            <svg class="input-search__close" id="input-close-btn" width="23" height="23">
+              <use xlink:href="./assets/icons/sprite.svg#close-icon"></use>
+            </svg>
           </div>
           <div class="header__right">
             <div class="header__info-phones">
               <p class="header__info-phone">+7(777) 777 77 77</p>
               <p class="header__info-phone">+7(777) 777 77 77</p>
             </div>
-            <button class="btn header__btn">
+            <button class="btn header__btn" id="order-btn">
               <span>Ваш Заказ</span>
               <svg class="btn__cart-img" width="23" height="23">
                 <use xlink:href="./assets/icons/sprite.svg#shopping-cart"></use>

@@ -18,6 +18,10 @@
     @include autoprefixer(transition, .3s ease-in-out)
   }
 
+  &--active {
+    background-color: #000000;
+  }
+
   &__inner {
     height: 100%;
     @include flex-rule(between, center);
@@ -46,7 +50,7 @@
   }
 
   &__nav {
-    transition: display .3s linear;
+    @include autoprefixer(transition, display .3s linear)
 
     @media(max-width: 1366px) {
       order: 3;
@@ -64,16 +68,19 @@
 
   &__menu-item {
     height: 100%;
-    cursor: pointer;
     margin-right: 40px;
     padding: 40px 0;
     position: relative;
     overflow: hidden;
-
+    cursor: pointer;
 
     @media(max-width: 1366px) {
       padding-top: 25px;
       padding-bottom: 25px;
+    }
+
+    &:hover .header__submenu {
+      display: block;
     }
 
     &:hover::after{
@@ -102,6 +109,7 @@
     color: #ffffff;
     @include font-rule(SourceSansPro, 900);
     font-size: 14px;
+    letter-spacing: 1.2px;
     text-transform: uppercase;
     margin-right: 10px;
   }
@@ -135,15 +143,6 @@
 
   &__input {
     @include flex-rule(0, center);
-    cursor: pointer;
-
-    &-img {
-      margin-right: 20px;
-
-      @media (max-width: 768px) {
-        margin-right: 0;
-      }
-    }
 
     &-search {
       @include font-rule(SourceSansPro, 400);
@@ -168,6 +167,23 @@
       }
     }
 
+    .input-search__icon {
+      margin-right: 20px;
+
+      @media (max-width: 768px) {
+        margin-right: 0;
+      }
+    }
+
+    .input-search__close {
+      display: none;
+      cursor: pointer;
+
+      &--active {
+        display: block;
+      }
+    }
+
     @media (max-width: 1366px) {
       // margin-right: 170px;
     }
@@ -179,7 +195,7 @@
 
   &__info {
     @include flex-rule(between, center);
-    transition: display .3s linear;
+    @include autoprefixer(transition, display .3s linear)
 
     &-phones {
       margin-right: 26px;
@@ -218,7 +234,7 @@
   }
 
   &__right {
-    @include flex-rule(0, center)
+    @include flex-rule(0, center);
   }
 
   &__btn-cart {
@@ -305,7 +321,7 @@
       &-link-img {
         position: absolute;
         right: 38px;
-        transform: rotate(-90deg);
+        @include autoprefixer(transform, rotate(-90deg))
       }
   
       &-info-phones {

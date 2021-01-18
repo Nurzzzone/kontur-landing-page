@@ -82,6 +82,7 @@ const svgSprites = () => {
       }
     }))
     .pipe(dest('./build/assets/icons'))
+    .pipe(browserSync.stream());
 }
 
 // ================================
