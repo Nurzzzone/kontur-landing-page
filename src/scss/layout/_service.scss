@@ -41,7 +41,6 @@
   &__partners {
     @include flex-rule(between, center);
     width: 100%;
-    margin-bottom: 70px;
     
     &-img {
       display: block;

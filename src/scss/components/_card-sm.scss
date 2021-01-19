@@ -1,0 +1,49 @@
+.card-sm {
+  width: 100%;
+  max-width: 700px;
+  border: 1px solid red;
+  @include flex-rule(between, center);
+
+  @media(max-width: 1366px) {
+    max-width: 560px;
+  }
+
+  &__info {
+    @include flex-rule(0, 0);
+    flex-direction: column;
+  }
+
+  &__img {
+    display: inline-block;
+    margin-right: 75px;
+
+    @media(max-width: 1366px) {
+      margin-right: 20px;
+    }
+  }
+
+  &__date {
+    display: inline-block;
+    @include font-rule(SourceSansPro, 400);
+    color: #ff7c0c;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  &__title {
+    @include font-rule(SourceSansPro, 700);
+    color: #000000;
+    font-size: 30px;
+    margin-bottom: 15px;
+    line-height: 1.1;
+    @include text-shorten;
+    width: 100%;
+  }
+
+  &__description {
+    @include font-rule(SourceSansPro, 400);
+    color: #767676;
+    font-size: 16px;
+    // @include text-shorten;
+  }
+}

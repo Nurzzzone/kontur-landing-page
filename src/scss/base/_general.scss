@@ -34,9 +34,13 @@
   width: 100%;
   max-width: 1570px;
   margin: 0 auto;
+
+  @media(max-width: 1366px) {
+    max-width: 1140px;
+  }
 }
 
-.section-items__title {
+.section-title {
   @include font-rule(SourceSansPro, 900);
   color: #000000;
   font-size: 60px;

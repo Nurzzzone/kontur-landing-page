@@ -28,8 +28,6 @@ html {
 }
 
 body {
-  height: 100%;
-  line-height: 1;
   width: 100%;
   overflow-x: hidden;
   color: #ffffff;
@@ -39,6 +37,11 @@ ol, ul {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
 }
 
 blockquote, q {

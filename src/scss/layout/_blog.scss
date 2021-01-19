@@ -1,0 +1,21 @@
+.blog {
+  padding-top: 140px;
+
+  &__heading {
+    @include flex-rule(between, center);
+    margin-bottom: 100px;
+  }
+
+  &__cards {
+    margin-bottom: 140px;
+  }
+
+  &__right {
+    @include flex-rule(between, 0);
+    flex-direction: column;
+  }
+
+  &__cards {
+    @include flex-rule(between, 0);
+  }
+}

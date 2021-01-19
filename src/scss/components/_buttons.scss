@@ -1,6 +1,5 @@
 .btn {
   @include font-rule(SourceSansPro, 900);
-  color: #ffffff;
   font-size: 14px;
   letter-spacing: 1.2px;
   padding: 20px 35px;
@@ -9,6 +8,14 @@
   text-transform: uppercase;
   border-radius: 3px;
   @include autoprefixer(transition, .3s ease-in-out);
+
+  &-bl {
+    color: #000000;
+  }
+
+  &-wh {
+    color: #ffffff;
+  }
 
   span {
     margin-right: 10px;
