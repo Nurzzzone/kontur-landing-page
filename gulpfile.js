@@ -107,7 +107,7 @@ const sync = () => {
 }
 
 exports.styles = styles
-exports.default = series(fonts, imageMin, svgSprites, styles, scripts, html, sync);
+exports.default = series(imageMin, svgSprites, styles, scripts, html, sync);
 
 // ======================================
 // ============== Gulp END ==============
