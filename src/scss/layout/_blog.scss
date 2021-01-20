@@ -8,6 +8,12 @@
 
   &__cards {
     margin-bottom: 140px;
+    @include flex-rule(between, 0);
+    flex-direction: row;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
   }
 
   &__right {
@@ -15,7 +21,44 @@
     flex-direction: column;
   }
 
-  &__cards {
-    @include flex-rule(between, 0);
+  &__items {
+    @include flex-rule(between, center);
+  }
+
+  &__item {
+    width: 30%;
+    position: relative;
+
+    &-img {
+      width: 100%;
+      display: inline-block;
+      object-fit: contain;
+    }
+
+    &-info {
+      position: absolute;
+      top: 50%;
+      left: 20%;
+      z-index: 5;
+      @include autoprefixer(transform, translateY(-50%));
+
+      @media (max-width: 1366px) {
+        left: 17%;
+      }
+    }
+
+    &-num {
+      @include font-rule(SourceSansPro, 700);
+      display: inline-block;
+      color: #ffffff;
+      font-size: 60px;
+      margin-bottom: 20px;
+    }
+
+    &-text {
+      @include font-rule(SourceSansPro, 700);
+      color: #ffffff;
+      font-size: 24px;
+    }
   }
 }

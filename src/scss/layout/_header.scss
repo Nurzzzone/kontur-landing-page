@@ -60,6 +60,13 @@
     @media (max-width: 768px) {
       display: none;
     }
+
+    @media (min-width: 1920px) {
+      &--closed {
+        display: none;
+      }
+    }
+
   }
 
   &__menu {
@@ -143,6 +150,7 @@
 
   &__input {
     @include flex-rule(0, center);
+    @include autoprefixer(transition, .3s ease-in-out);
 
     &-search {
       @include font-rule(SourceSansPro, 400);
@@ -153,6 +161,8 @@
       letter-spacing: 1.2px;
       display: block;
       width: 250px;
+      @include autoprefixer(transition, .3s ease-in-out);
+
     
       &::placeholder {
         @include font-rule(SourceSansPro, 400);

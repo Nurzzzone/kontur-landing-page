@@ -70,10 +70,19 @@
   }
 }
 
-@mixin text-shorten {
+@mixin truncate($width){
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  width: $width;
+}
+
+@mixin text-shorten($line) {
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line;
 }
 
 // =========================================

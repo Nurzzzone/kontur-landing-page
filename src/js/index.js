@@ -48,6 +48,7 @@ document.addEventListener('click', function(e) {
     document.querySelector('#input-close-btn').classList.remove('input-search__close--active');
     header.classList.remove('header--active');
     document.querySelector('.header__right').style.display = "flex"
+    document.querySelector('.header__nav').classList.remove('header__nav--closed');
     searchInput.style.width = 250 + "px";
     headerInfo.style.paddingTop = '';
     headerInfo.style.paddingBottom = '';
@@ -59,11 +60,18 @@ const headerInfo = document.querySelector('#header-info');
 const headerInput = document.querySelector('.header__input');
 let width = orderBtn.offsetHeight - headerInput.offsetHeight;
 
-searchInput.addEventListener('focus', function() {
+searchInput.addEventListener('click', function() {
   document.querySelector('#input-close-btn').classList.add('input-search__close--active');
+  document.querySelector('.header__nav').classList.add('header__nav--closed');
   document.querySelector('.header__right').style.display = "none"
   header.classList.add('header--active');
-  searchInput.style.width = 450 + "px";
   headerInfo.style.paddingTop = width/2 - 1 + 'px';
   headerInfo.style.paddingBottom = width/2 - 1 + 'px';
+
+  if (window.innerWidth > 1366) {
+    searchInput.style.width = 1100 + "px";
+  } 
+  if (window.innerWidth <= 1366) {
+    searchInput.style.width = 550 + "px";
+  } 
 })

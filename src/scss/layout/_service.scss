@@ -12,12 +12,11 @@
     padding: 30px 40px;
     border-radius: 6px;
     margin-bottom: 70px;
-    @include flex-rule(between, center)
+    @include flex-rule(between, center);
+    box-shadow: 0 5px 8px -2px #ff7c0c;
   }
 
   &__item {
-    // border: 1px solid red;
-
     svg {
       margin-bottom: 15px;
     }
