@@ -3,10 +3,22 @@
     margin-top: -220px;
     padding-top: 300px;
     padding-bottom: 200px;
+
+    @media(max-width: 768px) {
+      padding-bottom: 40px;
+    }
+
+    @media(max-width: 768px) {
+      padding-top: 250px;
+    }
   }
 
   &__items {
     padding: 100px 0 0;
+
+    @media(max-width: 768px) {
+      padding-top: 20px;
+    }
   }
 
   &__item {
@@ -14,6 +26,10 @@
     max-width: 548px;
     position: relative;
     padding-left: 100px;
+
+    @media(max-width: 768px) {
+      padding-left: 30px;
+    }
   
     &-title {
       @include font-rule(SourceSansPro, 900);
@@ -31,6 +47,10 @@
       margin-bottom: 70px;
       line-height: 1.5;
       padding-right: 58px;
+
+      @media(max-width: 768px) {
+        margin-bottom: 20px;
+      }
     }
 
     .v-lines {

@@ -29,7 +29,7 @@
     flex-direction: row;
 
     @media(max-width: 1366px) {
-      padding-top: 25px;
+      padding-top: 10px;
     }
 
     @media (max-width: 768px) {
@@ -41,11 +41,14 @@
     @media(max-width: 1366px){
       margin-right: 20px;
     }
+
     @media (max-width: 768px) {
       order: 1;
     }
+
     @media (max-width: 375px) {
       width: 140px;
+      margin-left: 20px;
     }
   }
 
@@ -81,7 +84,7 @@
     cursor: pointer;
 
     @media(max-width: 1366px) {
-      padding-top: 25px;
+      padding-top: 10px;
       padding-bottom: 25px;
     }
 
@@ -181,6 +184,11 @@
 
       @media (max-width: 768px) {
         margin-right: 0;
+
+      }
+
+      @media (max-width: 375px) {
+        margin-right: -10px;
       }
     }
 

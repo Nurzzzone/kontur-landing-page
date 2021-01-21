@@ -11,6 +11,11 @@
     max-width: 100%;
     margin-bottom: 30px;
 
+  @media(max-width: 425px) {
+    @include flex-rule(0, 0);
+    flex-direction: column;
+  }
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -27,6 +32,11 @@
 
     @media(max-width: 1366px) {
       margin-right: 20px;
+    }
+
+    @media(max-width: 425px) {
+      margin-right: 0;
+      margin-bottom: 30px;
     }
   }
 
@@ -45,6 +55,10 @@
     font-size: 30px;
     margin-bottom: 15px;
     line-height: 1.1;
+
+    @media(max-width: 425px) {
+      font-size: 18px;
+    }
   }
 
   &__description {

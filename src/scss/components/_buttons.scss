@@ -94,11 +94,19 @@
 
   &--active {
     bottom: 10%;
+
+    @media(max-width: 375px) {
+      bottom: 5%;
+    }
   }
 
   &:hover {
-    background-color: #ffffff;
+    background-color: #000000;
     @include autoprefixer(transition, all .3s ease-in-out);
+  }
+
+  @media(max-width: 375px) {
+    right: 20px;
   }
 
   &__line {

@@ -98,3 +98,5 @@ searchInput.addEventListener('click', function() {
     searchInput.style.width = 550 + "px";
   } 
 })
+
+alert(header.offsetHeight)
