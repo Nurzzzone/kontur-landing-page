@@ -25,10 +25,20 @@
     @include flex-rule(between, 0);
     margin-bottom: 100px;
 
+    @media(max-width: 375px) {
+      @include flex-rule(0, center);
+      flex-direction: column;
+      margin-bottom: 50px;
+    }
+
     &-left {
       @include flex-rule(0, 0);
       flex-direction: column;
       width: 20%;
+
+      @media(max-width: 768px) {
+        display: none;        
+      }
     }
 
     &-right {
@@ -37,6 +47,14 @@
 
       @media(max-width: 1366px) {
         width: 73%;
+      }
+
+      @media(max-width: 768px) {
+        width: 100%;
+      }
+
+      @media(max-width: 375px) {
+        @include flex-rule(center, 0);
       }
     }
   }
@@ -58,9 +76,8 @@
       text-transform: uppercase;
       letter-spacing: 1.2px;
 
-      @media(max-width: 768px) {
-        color: #ff7c0c;
-        margin-bottom: 0;
+      @media(max-width: 320px) {
+        margin-bottom: 0; 
       }
     }
 
@@ -83,6 +100,16 @@
   &__item-right {
     @include flex-rule(0, 0);
     flex-direction: column;
+
+    @media(max-width: 320px) {
+
+      &:nth-child(1) {
+        display: none
+      }
+      &:nth-child(2) {
+        display: none
+      }
+    }
     
     &-title {
       @include font-rule(SourceSansPro, 900);
@@ -90,7 +117,11 @@
       font-size: 15px;
       margin-bottom: 30px;
       text-transform: uppercase;
-      letter-spacing: 1.2px
+      letter-spacing: 1.2px;
+
+      @media(max-width: 768px) {
+        display: none;
+      }
     }
 
     &-link {
@@ -117,20 +148,72 @@
     margin-bottom: 40px;
     line-height: 1.5;
 
+    @media(max-width: 375px) {
+      text-align: center;
+    }
+
+    @media(max-width: 320px) {
+      text-align: center;
+      font-size: 14px;
+    }
+
     &:nth-child(3) {
       margin-bottom: 60px;
+
+      @media(max-width: 320px) {
+        margin-bottom: 30px;
+      }
     }
   }
 
   &__copyright {
     @include flex-rule(between, center);
 
+    @media(max-width: 375px) {
+      @include flex-rule(center, center);
+    }
+
     &-left {
       width: 20%;
+
+      @media(max-width: 375px) {
+        width: 50%;
+      }
     }
 
     &-right {
       width: 68%;
+
+      @media(max-width: 375px) {
+        display: none;
+      }
+    }
+  }
+
+  &__links {
+    display: none;
+
+    @media(max-width: 768px) {
+      @include flex-rule(0, 0);
+      flex-direction: column;
+      margin-bottom: 30px;
+    }
+
+    & .footer__link {
+      @include font-rule(SourceSansPro, 900);
+      color: #ff7c0c;
+      font-size: 15px;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+      
+      @media(max-width: 375px) {
+        text-align: center;
+      }
     }
   }
 }

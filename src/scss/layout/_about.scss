@@ -37,6 +37,10 @@
       font-size: 24px;
       line-height: 1.2;
       margin-bottom: 30px;
+
+      @media(max-width: 320px) {
+        font-size: 22px;
+      }
     }
   
     &-text {
@@ -50,6 +54,10 @@
 
       @media(max-width: 768px) {
         margin-bottom: 20px;
+      }
+
+      @media(max-width: 320px) {
+        padding-right: 0px;
       }
     }
 

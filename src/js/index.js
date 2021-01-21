@@ -1,5 +1,5 @@
-// Owl-Carousel Home Section
 $(document).ready(function(){
+  // Owl-Carousel Home Section
   $(".home__items").owlCarousel({
     loop: true,
     items: 1,
@@ -10,6 +10,14 @@ $(document).ready(function(){
     center: true,
     dots: false,
   });
+
+  // click to scroll to top
+  $('.scroll-top').click(function() {
+    $('html, body').animate({
+      scrollTop: 0
+    }, 1000)
+  })
+
 });
 
 
@@ -45,14 +53,6 @@ window.addEventListener('scroll', function(){
 burger.addEventListener('click', function() {
   mobileMenu.classList.toggle('header__mobile--active');
 })
-
-scrollToTop.addEventListener('click', function(){
-  window.scrollTo({
-    behavior: "smooth",
-    top: 0
-  })
-})
-
 
 
 document.addEventListener('click', function(e) {
@@ -98,5 +98,3 @@ searchInput.addEventListener('click', function() {
     searchInput.style.width = 550 + "px";
   } 
 })
-
-alert(header.offsetHeight)
