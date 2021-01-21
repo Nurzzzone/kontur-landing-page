@@ -47,6 +47,8 @@
   }
 }
 
+// Header mobile burger button
+// ================================
 .burger {
   background-color: transparent;
   cursor: pointer;
@@ -72,6 +74,45 @@
 
   @media(max-width: 768px) {
     display: block;
+  }
+}
+
+// Scroll to top button
+// ================================
+.scroll-top {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: -100%;
+  right: 40px;
+  z-index: 100;
+  background-color: #ff7c0c;
+  @include autoprefixer(transform, rotate(-135deg));
+  @include autoprefixer(transition, all .3s ease-in-out);
+
+  &--active {
+    bottom: 10%;
+  }
+
+  &:hover {
+    background-color: #ffffff;
+    @include autoprefixer(transition, all .3s ease-in-out);
+  }
+
+  &__line {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    z-index: 101;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    background-color: transparent;
+    display: block;
+    @include autoprefixer(transform, translate(-50%, -50%));
   }
 }
 
